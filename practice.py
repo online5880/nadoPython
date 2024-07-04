@@ -1,47 +1,36 @@
-﻿print(2+3*4) # 14
-print((2+3)*4) # 20
-number = 2+3*4 # 14
-print(number)
+﻿from random import *
 
-number = number + 2 # 16
-print(number)
+# 랜덤
+# print(random()) # 0.0 ~ 1.0 미만의 임의의 값 생성
+# print(random() * 10) # 0.0 ~ 10.0 미만의 임임의 값 생성
+# print(int(random() * 10)) # 0 부터 10 미만의 임임의 값 생성
+# print(int(random() * 10)) # 0 부터 10 미만의 임임의 값 생성
+# print(int(random() * 10)) # 0 부터 10 미만의 임임의 값 생성
+# print(int(random() * 10) + 1) # 1 부터 10 이하의 임임의 값 생성
+# print(int(random() * 10) + 1) # 1 부터 10 이하의 임임의 값 생성
+# print(int(random() * 10) + 1) # 1 부터 10 이하의 임임의 값 생성
+# print(int(random() * 10) + 1) # 1 부터 10 이하의 임임의 값 생성
+# print(int(random() * 10) + 1) # 1 부터 10 이하의 임임의 값 생성
+# print(int(random() * 10) + 1) # 1 부터 10 이하의 임임의 값 생성
+# print(int(random() * 10) + 1) # 1 부터 10 이하의 임임의 값 생성
 
-number += 2 # 18
-print(number)
+# print(int(random() * 45) + 1) # 1 부터 45 이하의 임임의 값 생성
+# print(int(random() * 45) + 1) # 1 부터 45 이하의 임임의 값 생성
+# print(int(random() * 45) + 1) # 1 부터 45 이하의 임임의 값 생성
+# print(int(random() * 45) + 1) # 1 부터 45 이하의 임임의 값 생성
+# print(int(random() * 45) + 1) # 1 부터 45 이하의 임임의 값 생성
+# print(int(random() * 45) + 1) # 1 부터 45 이하의 임임의 값 생성
 
-number *= 2 # 36
-print(number)
+# print(randrange(1,46)) # 1 부터 45 미만의 임임의 값 생성
+# print(randrange(1,46)) # 1 부터 45 미만의 임임의 값 생성
+# print(randrange(1,46)) # 1 부터 45 미만의 임임의 값 생성
+# print(randrange(1,46)) # 1 부터 45 미만의 임임의 값 생성
+# print(randrange(1,46)) # 1 부터 45 미만의 임임의 값 생성
+# print(randrange(1,46)) # 1 부터 45 미만의 임임의 값 생성
 
-number /= 2 # 18
-print(number)
-
-number -= 2 # 16
-print(number)
-
-number %= 5 # 1
-print(number)
-
-# 절대값
-print(abs(-5)) #5
-
-# 제곱
-print(pow(4,2)) # 4*4 = 16
-
-# 최소, 최대
-print(min(5, 12)) # 5
-print(max(5, 12)) # 12
-
-# 반올림
-print(round(3.14)) # 3
-print(round(4.99)) # 5
-
-
-from math import *
-# 내림
-print(floor(4.99)) # 4
-
-# 올림
-print(ceil(3.14)) # 4
-
-# 제곱근
-print(sqrt(16)) # 4
+print(randint(1, 45)) # 1 부터 45 이하의 임임의 값 생성
+print(randint(1, 45)) # 1 부터 45 이하의 임임의 값 생성
+print(randint(1, 45)) # 1 부터 45 이하의 임임의 값 생성
+print(randint(1, 45)) # 1 부터 45 이하의 임임의 값 생성
+print(randint(1, 45)) # 1 부터 45 이하의 임임의 값 생성
+print(randint(1, 45)) # 1 부터 45 이하의 임임의 값 생성
