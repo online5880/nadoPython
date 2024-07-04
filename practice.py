@@ -1,10 +1,18 @@
-﻿jumin = '990120-1234567'
+﻿# 문자열 처리 함수
+python = "Python is Amazing"
+print(python.lower())
+print(python.upper())
+print(python[0].isupper())
+print(len(python))
+print(python.replace("Python","Java"))
 
-print('성별 : ' + jumin[7])
-print('연 : ' + jumin[0:2])
-print('월 : '+ jumin[2:4])
-print('일 : '+ jumin[4:6])
+Index = python.index("n")
+print(Index)
+Index = python.index("n", Index+1)
+print(Index)
 
-print('생년월일 : '+ jumin[:6]) # 처음부터 6 직전까지 
-print('뒤 7자리 : '+jumin[7:])
-print('뒤 7자리 (뒤에서부터) : '+jumin[-7:])
+print(python.find("Java"))
+# print(python.index("Java"))
+print("hi")
+
+print(python.count("n"))
