@@ -1,60 +1,52 @@
-﻿# 리스트 []
+﻿# 사전 (dictionary)
 
-# 지하철 칸별로 10명, 20명, 30명
+cabinet = {3:"유재석", 100:"김태호"}
 
-# subway1 = 10
-# subway2 = 20
-# subway3 = 30
+# value 얻어오기
+print(cabinet[3])
+print(cabinet[100])
 
-subway = [10,20,30]
-print(subway)
+print(cabinet.get(3))
 
-subway = ["유재석","조세호","박명수"]
-print(subway)
+# 대괄호로 가져올 때 값이 없으면 오류가 나면서 프로그램이 종료된다. 
+# print(cabinet[5])
+# print("hi")
 
-# 조세호씨가 몇 번째 칸에 타고 있는가?
-print(subway.index("조세호"))
+# get() 으로 가져오면 "None"이 뜨면서 프로그램이 종료되지 않는다.
+print(cabinet.get(5))
+print("hi")
 
-# 하사씨가 다음 정류장에서 다음 칸에 탐
-subway.append("하하")
-print(subway)
+# 값이 있는지 확인
+print(3 in cabinet) # True
+print(5 in cabinet) # False
 
-# 정형돈씨를 유재석 / 조세호 사이에 태워봄
-subway.insert(1,"정형돈")
-print(subway)
 
-# 지하철에 있는 사람을 한 명씩 뒤에서 꺼냄
-print(subway.pop())
-print(subway)
+cabinet = {"A-3":"유재석","B-100":"김태호"}
+print(cabinet["A-3"])
+print(cabinet["B-100"])
 
-# print(subway.pop())
-# print(subway)
-# 
-# print(subway.pop())
-# print(subway)
+# 새 손님
+# 기존에 키가 있으면 값 업데이트, 없으면 키와 값 추가
+print(cabinet)
+cabinet["A-3"] = "김종국"
+cabinet["C-20"] = "조세호"
+print(cabinet)
 
-# 같은 이림의 사람이 몇 명 있는지 확인
-subway.append("유재석")
-print(subway)
-print(subway.count("유재석"))
+# 간 손님
+# 키 삭제
+del cabinet["A-3"]
+print(cabinet)
 
-# 정렬도 가능
-num_list = [5,2,4,3,1]
-num_list.sort()
-print(num_list)
+# key 들만 출력
+print(cabinet.keys())
 
-# 순서 뒤집기 가능
-num_list.reverse()
-print(num_list)
+# value 들만 출력
+print(cabinet.values())
 
-# 모두 지우기
-# num_list.clear()
-# print(num_list)
+# key, value 쌍으로 출력
+print(cabinet.items())
 
-# 다양한 자료형 함께 사용
-mix_list = ["조세호",20,True]
-print(mix_list)
-
-# 리스트 확장
-num_list.extend(mix_list)
-print(num_list)
+# 목욕탕 폐점
+# 모든 값 제거
+cabinet.clear()
+print(cabinet)
