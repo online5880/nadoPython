@@ -1,52 +1,28 @@
-﻿# 사전 (dictionary)
+﻿# 집합 (set)
+# 중복 안됨. 순서 없음
 
-cabinet = {3:"유재석", 100:"김태호"}
+my_set = {1,2,3,3,3}
+print(my_set)
 
-# value 얻어오기
-print(cabinet[3])
-print(cabinet[100])
+java = {"유재석","김태호","양세형"}
+python = set(["유재석","박명수"])
 
-print(cabinet.get(3))
+# 교집합 (java 와 python 을 모두 할 수 있는 개발자
+print(java & python)
+print(java.intersection(python))
 
-# 대괄호로 가져올 때 값이 없으면 오류가 나면서 프로그램이 종료된다. 
-# print(cabinet[5])
-# print("hi")
+# 합집함 (java 할 수 있거나 python 할 수 있는 개발자)
+print(java | python)
+print(java.union(python))
 
-# get() 으로 가져오면 "None"이 뜨면서 프로그램이 종료되지 않는다.
-print(cabinet.get(5))
-print("hi")
+# 차집합 (java 할 수 있지만 python 은 할 줄 모르는 개발자
+print(java - python)
+print(java.difference(python))
 
-# 값이 있는지 확인
-print(3 in cabinet) # True
-print(5 in cabinet) # False
+# python 할 줄 아는 사람이 늘어남
+python.add("김태호")
+print(python)
 
-
-cabinet = {"A-3":"유재석","B-100":"김태호"}
-print(cabinet["A-3"])
-print(cabinet["B-100"])
-
-# 새 손님
-# 기존에 키가 있으면 값 업데이트, 없으면 키와 값 추가
-print(cabinet)
-cabinet["A-3"] = "김종국"
-cabinet["C-20"] = "조세호"
-print(cabinet)
-
-# 간 손님
-# 키 삭제
-del cabinet["A-3"]
-print(cabinet)
-
-# key 들만 출력
-print(cabinet.keys())
-
-# value 들만 출력
-print(cabinet.values())
-
-# key, value 쌍으로 출력
-print(cabinet.items())
-
-# 목욕탕 폐점
-# 모든 값 제거
-cabinet.clear()
-print(cabinet)
+# java 를 잊었어요
+java.remove("김태호")
+print(java)
