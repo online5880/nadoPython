@@ -1,28 +1,23 @@
-﻿# 집합 (set)
-# 중복 안됨. 순서 없음
+﻿# 댓글 이벤트
+# 댓글 작성자들 중에 추첨을 통해 1명은 치킨, 3명은 커피 쿠폰을 받게 됩니다.
 
-my_set = {1,2,3,3,3}
-print(my_set)
+# 조건 1 : 편의상 댓글은 20명이 작성하였고 아이디는 1~20 이라고 가정
+# 조건 2 : 댓글 내용과 상관 없이 무작위로 추첨하되 중복 불가
+# 조건 3 : random 모듈의 suffle 과 sample 을 활용
 
-java = {"유재석","김태호","양세형"}
-python = set(["유재석","박명수"])
+# 출력 예제
+# -- 당첨자 발표--
+# 치킨 당첨자 : 1
+# 커피 담청자 : [2, 3, 4]
+# -- 축하합니다 --
 
-# 교집합 (java 와 python 을 모두 할 수 있는 개발자
-print(java & python)
-print(java.intersection(python))
+from random import *
+students = list(range(1,21))
 
-# 합집함 (java 할 수 있거나 python 할 수 있는 개발자)
-print(java | python)
-print(java.union(python))
+shuffle(students)
 
-# 차집합 (java 할 수 있지만 python 은 할 줄 모르는 개발자
-print(java - python)
-print(java.difference(python))
-
-# python 할 줄 아는 사람이 늘어남
-python.add("김태호")
-print(python)
-
-# java 를 잊었어요
-java.remove("김태호")
-print(java)
+print('-- 당첨자 발표 --')
+winners = sample(students,4)
+print('치킨 당첨자 : {}'.format(winners[0]))
+print('커피 당첨자 : {}'.format(winners[1:]))
+print('-- 축하합니다 --')
