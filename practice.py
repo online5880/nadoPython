@@ -1,6 +1,14 @@
-﻿# 키워드 값
-def profile(name, age, main_lang):
-    print(name, age, main_lang)
+﻿# 가변인자
+# def profile(name, age, lang1, lang2, lang3 ,lang4, lang5):
+#     print("이름 : {}\t나이: {}\t".format(name,age), end="")
+#     print(lang1, lang2, lang3,lang4,lang5)
+
+def profile(name, age, *language):
+    print("이름 : {}\t나이: {}\t".format(name, age), end="")
+    for lang in language:
+        print(lang, end="")
+    print()
     
-profile(name="유재석",main_lang="파이썬",age=20)
-profile(main_lang="자바",age=25,name="김태호")
+
+print("유재석", 25, "python", "java", "c", "c++", "C#","javascript")
+print("김태호", 20, "kotlin", "swift")
