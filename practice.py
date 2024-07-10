@@ -1,19 +1,25 @@
-﻿# Quiz ) 당신은 Cocoa 서비스를 이용하는 택시 기사이빈다.
-# 50 명의 승객과 매칭 기회가 있을 때, 총 탑승 승객 수를 구하는 프로그램을 작성하시오
+﻿# 퀴즈
+# 표준 체중을 구하는 프로그램을 작성하시오
 
-# 조건 1 : 승객별 운행 소요 시간은 5분 ~ 50분 사이의 난수로 정해집니다.
-# 조건 2 : 당신은 소요 시간 5분 ~ 15분 사이의 승객만 매칭해야 합니다.
+# * 표준 체중 : 각 개인의 키에 적당한 체중
 
-import random
+# * 성별에 따른 공식
+# 남자 : 키 x 키 x 22
+# 여자 : 키 x 키 x 21
 
-person = 0
-for i in range(1, 51):
-    time = random.randint(5, 50)
-    if 5 <= time <= 15:
-        print("[O] {}번째 손님 (소요시간 : {}분)".format(i,time))
-        person+=1
-    else:
-        print("[ ] {}번째 손님 (소요시간 : {}분)".format(i,time))
-        
-print("총 탑승 승객 : {} 분".format(person))
-        
+# 조건 1 : 표준 체중은 별도의 함수 내에서 계산
+#   함수명 : std_weight
+#   전달값 : 키(height), 성별(gender)
+# 조건 2 : 표준 체중은 소수점 둘째자리까지 표시
+
+def std_weight(height, gender):
+    if gender == "남자":
+        return height * height * 22
+    elif gender == "여자":
+        return height * height * 21
+
+height = 175.0
+gender = "남자"
+weight = round(std_weight(height / 100, gender),2)
+
+print("키 {}cm {}의 표준 체중은 {}kg 입니다.".format(height,gender,weight))
