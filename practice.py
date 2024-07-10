@@ -1,14 +1,20 @@
-﻿# 가변인자
-# def profile(name, age, lang1, lang2, lang3 ,lang4, lang5):
-#     print("이름 : {}\t나이: {}\t".format(name,age), end="")
-#     print(lang1, lang2, lang3,lang4,lang5)
+﻿# 지역변수와 전역 변수
 
-def profile(name, age, *language):
-    print("이름 : {}\t나이: {}\t".format(name, age), end="")
-    for lang in language:
-        print(lang, end="")
-    print()
-    
+gun = 10
 
-print("유재석", 25, "python", "java", "c", "c++", "C#","javascript")
-print("김태호", 20, "kotlin", "swift")
+
+def checkpoint(soldiers):  # 경계근무
+    global gun  # 전역 공간에 있는 gun 사용
+    gun = gun - soldiers
+    print("[함수 내] 남은 총 : {}".format(gun))
+
+
+def checkpoint_ret(gun, soldiers):
+    gun = gun - soldiers
+    print("[함수 내] 남은 총 : {}".format(gun))
+    return gun
+
+print("전체 총 : {}".format(gun))
+# checkpoint(2)
+gun = checkpoint_ret(gun, 2)
+print("남은 총 : {}".format(gun))
